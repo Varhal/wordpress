@@ -123,3 +123,12 @@ function gma_custom_submit_job_form_fields( $fields ) {
     unset($fields['company']['company_twitter']);
     return $fields;
 }
+
+/**
+ * Add button to the TinyMCE editor toolbar Job */
+ 
+function customize_editor_toolbar( $args ) {
+	$args['tinymce']['toolbar1'] = 'formatselect,bold,|,bullist,|,link,unlink,|,undo,redo';
+	return $args;
+}
+
